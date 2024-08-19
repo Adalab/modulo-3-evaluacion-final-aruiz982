@@ -1,0 +1,40 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60%;
+
+    margin-inline: auto;
+}
+
+.text__input, .select__input{
+    box-sizing: border-box;
+
+    width: 75%;
+    height: 30px;
+    line-height: 30px;
+
+    outline: solid 1.5px $card-color;
+    border: solid 1.5px $card-color;
+
+    background-color: $base-color;
+    color: $white-color;
+}
+
+.input__label--text{
+    color: $white-color;
+}
+
+.select__option{
+    height: 30px;
+    line-height: 30px;
+
+    color: #fff;
+}
