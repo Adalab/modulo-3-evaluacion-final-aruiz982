@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 
-const SelectHouseFilter = ({setCharactersHouse, charactersHouse}) => {
+const SelectHouseFilter = ({setCharactersHouse, charactersHouse, setCharacterInput}) => {
 
     const handleCharacterFilterHouse = (ev) => {
         let filteredHouse = ev.currentTarget.value;
         setCharactersHouse(filteredHouse.toLowerCase());
+
+        setCharacterInput('');
     }
 
     return (
@@ -22,7 +24,8 @@ const SelectHouseFilter = ({setCharactersHouse, charactersHouse}) => {
 
 SelectHouseFilter.propTypes = {
     setCharactersHouse: PropTypes.func.isRequired,
-    charactersHouse: PropTypes.string.isRequired
+    charactersHouse: PropTypes.string.isRequired,
+    setCharacterInput: PropTypes.func
 };
 
 export default SelectHouseFilter;

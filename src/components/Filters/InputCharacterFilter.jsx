@@ -25,7 +25,7 @@ const InputCharacterFilter = ({ originalCharacters, setCharacters, characterInpu
 InputCharacterFilter.propTypes = {
     originalCharacters: PropTypes.array.isRequired,
     setCharacters: PropTypes.func.isRequired,
-    characterInput:PropTypes.string,
+    characterInput:PropTypes.string.isRequired,
     setCharacterInput: PropTypes.func
 };
 

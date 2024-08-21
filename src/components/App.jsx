@@ -40,6 +40,7 @@ function App() {
             element={
               <Landing
                 originalCharacters={originalCharacters}
+                setOriginalCharacters={setOriginalCharacters}
                 setCharacters={setCharacters}
                 setCharactersHouse={setCharactersHouse}
                 characters={characters}

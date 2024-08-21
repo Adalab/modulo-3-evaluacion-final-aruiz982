@@ -1,0 +1,30 @@
+.complementary__filters{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    margin-block: 30px;
+
+    @media (min-width: 1024px){
+        margin-inline:auto;
+
+        justify-content: flex-end;
+        
+        width: 70%;
+    }
+}
+
+.complementary__filters--btn{
+    width: 180px;
+    height: 35px;
+
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+
+    background-color: $card-color;
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 600;
+}

@@ -6,7 +6,7 @@ const CharactersList = ({characters}) => {
 
     const characterListLength = (characters) => {
         if(characters.length === 0){
-            return <li>Ningún personaje coincide con ese nombre</li> 
+            return <li className='input__label--text'>Ningún personaje coincide con ese nombre</li> 
         } else {
             return characters.map(character => (
                 <li key={character.id} className="card__element">

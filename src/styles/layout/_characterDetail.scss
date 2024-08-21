@@ -8,6 +8,8 @@
 }
 
 .detail__card{
+    position: relative;
+
     width: 80%;
 
     margin-inline: auto;
@@ -96,4 +98,17 @@
 
 path{
     fill: $white-color;
+}
+
+.detail__card--houseName{
+    position: absolute;
+    right: 0;
+
+    padding-right: 10px;
+
+    color: $white-color;
+    font-size: 40px;
+    font-weight: 700;
+    opacity: 0.2;
+    text-transform: uppercase;
 }
