@@ -14,6 +14,8 @@ function App() {
 
   const [charactersHouse, setCharactersHouse] = useState('gryffindor');
 
+  const [characterInput, setCharacterInput] = useState('');
+
   useEffect(() => {
     fetch(`https://hp-api.onrender.com/api/characters/house/${charactersHouse}`)
       .then((response) => response.json())
@@ -41,6 +43,9 @@ function App() {
                 setCharacters={setCharacters}
                 setCharactersHouse={setCharactersHouse}
                 characters={characters}
+                characterInput={characterInput}
+                charactersHouse={charactersHouse}
+                setCharacterInput={setCharacterInput}
               />
             }
         />

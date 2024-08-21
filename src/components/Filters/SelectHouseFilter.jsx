@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 
-const SelectHouseFilter = ({setCharactersHouse}) => {
+const SelectHouseFilter = ({setCharactersHouse, charactersHouse}) => {
 
     const handleCharacterFilterHouse = (ev) => {
-        const filteredHouse = ev.currentTarget.value;
+        let filteredHouse = ev.currentTarget.value;
         setCharactersHouse(filteredHouse.toLowerCase());
     }
 
     return (
         <label htmlFor="" className="input__label">
           <span className="input__label--text">Selecciona la casa:</span>
-          <select name="" id="" className="select__input" onClick={handleCharacterFilterHouse}>
+          <select name="" id="" className="select__input" onChange={handleCharacterFilterHouse} value={charactersHouse}>
             <option value="gryffindor" className="select__option">Gryffindor</option>
             <option value="slytherin" className="select__option">Slytherin</option>
             <option value="ravenclaw" className="select__option">Ravenclaw</option>
@@ -21,7 +21,8 @@ const SelectHouseFilter = ({setCharactersHouse}) => {
 }
 
 SelectHouseFilter.propTypes = {
-    setCharactersHouse: PropTypes.func,
+    setCharactersHouse: PropTypes.func.isRequired,
+    charactersHouse: PropTypes.string.isRequired
 };
 
 export default SelectHouseFilter;
